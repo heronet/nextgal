@@ -8,7 +8,7 @@ type Props = {
     username: string;
   };
 };
-export async function getUser(username: string) {
+async function getUser(username: string) {
   const response = await fetch(
     `https://api.unsplash.com/users/${username}?client_id=${process.env.UNSPLASH_ACCESS_KEY}`
   );
